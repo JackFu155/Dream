@@ -5,10 +5,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float moveVector;
+    public float jumpVector;
+    public Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -30,5 +32,18 @@ public class Movement : MonoBehaviour
         {
             transform.position -= new Vector3(0.0f, 0.0f, moveVector);
         }
+        if (Input.GetKey(KeyCode.D) == true)
+        {
+            transform.position -= new Vector3(0.0f, 0.0f, moveVector);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            Jump();
+        }
+    }
+
+    public void Jump()
+    {
+        rb.AddForce(new Vector3(0.0f, jumpVector, 0.0f));
     }
 }
