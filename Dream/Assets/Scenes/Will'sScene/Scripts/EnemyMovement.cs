@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public float dist;
     public GameObject player;
     public Rigidbody rb;
+    public float sightDist=3f;
     public enum Ai{
       path,
       chase
@@ -62,8 +63,14 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    
+     Vector3 chaseVec= player.transform.position - transform.position;
      if(ai==Ai.path){
       float dt = Time.deltaTime;
+      if(Vector3.Angle(player.transform.position-transform.position,transform.forward)<20f&&chaseVec.magnitude<sightDist ){
+
+        ai = Ai.chase;
+      }
        if(wasChase){
           t+=dt*returnVel;
           transform.position = Vector3.Lerp(p,q,t);
@@ -79,8 +86,11 @@ public class EnemyMovement : MonoBehaviour
         
     }
      }
+
      if(ai==Ai.chase){
-        Vector3 chaseVec= player.transform.position - transform.position;
+      if(chaseVec.magnitude>sightDist){
+        aiSwap();
+      }
         chaseVec=chaseVec.normalized;
         transform.forward=chaseVec;
         chaseVec=chaseVec*chaseMag;

@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: chaseMag
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5668855280860983937, guid: a0d5c2173ff08ecaa9d165111c1359a5, type: 3}
+      propertyPath: sightDist
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5668855280860983967, guid: a0d5c2173ff08ecaa9d165111c1359a5, type: 3}
       propertyPath: m_Name
       value: Enemy
