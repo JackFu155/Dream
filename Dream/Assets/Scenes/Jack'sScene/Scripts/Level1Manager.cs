@@ -12,12 +12,13 @@ public class Level1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //isActivated = button.GetComponent<bool>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        isActivated = button.GetComponent<Button>().activated; 
         if(isActivated == true)
         {
             if (door.transform.position.y < 6.0f)
