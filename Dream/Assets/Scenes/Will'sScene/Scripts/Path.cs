@@ -127,8 +127,12 @@ public class Path
   }
   public Vector3 foot(Vector3 r){
     Vector3 q = Vector3.zero;
-    q = pathList[index][0] + ((Vector3.Dot((pathList[index][1]-pathList[index][0]),(r-pathList[index][0]))/(pathDist*pathDist))*(pathList[index][1]-pathList[index][0]));
+    q = pathList[index][0] + ((footT(r))*(pathList[index][1]-pathList[index][0]));
     return q;
   } 
+  public float footT(Vector3 r){
+      return Vector3.Dot((pathList[index][1]-pathList[index][0]),(r-pathList[index][0]))/(pathDist*pathDist);
+
+  }
 
 }
