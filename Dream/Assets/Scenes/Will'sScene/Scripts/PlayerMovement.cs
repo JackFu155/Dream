@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveVector = .005f;
     public float jumpVector = 400f;
+    public Vector3 startPos;
     public Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
       
         rb = GetComponent<Rigidbody>();
+        Vector3 pos = transform.position;
+        startPos = new Vector3(pos.x,pos.y,pos.z);
     }
 
     // Update is called once per frame
@@ -43,5 +46,14 @@ public class PlayerMovement : MonoBehaviour
     public void Jump()
     {
         rb.AddForce(new Vector3(0.0f, jumpVector, 0.0f));
+        
+    }
+    public void restart(){
+      transform.position = startPos;
+    }
+    void OnCollisionEnter(Collision col){
+      if(col.gameObject.tag == "Enemy"){
+        restart();
+      }
     }
 }
