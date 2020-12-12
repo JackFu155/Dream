@@ -16,23 +16,19 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W) == true)
+        if(Input.GetKey(KeyCode.W) == true || Input.GetKey(KeyCode.UpArrow) == true)
         {
             transform.position += new Vector3(moveVector, 0.0f, 0.0f);
         }
-        if (Input.GetKey(KeyCode.A) == true)
+        if (Input.GetKey(KeyCode.A) == true || Input.GetKey(KeyCode.LeftArrow) == true)
         {
             transform.position += new Vector3(0.0f, 0.0f, moveVector);
         }
-        if (Input.GetKey(KeyCode.S) == true)
+        if (Input.GetKey(KeyCode.S) == true || Input.GetKey(KeyCode.DownArrow) == true)
         {
             transform.position -= new Vector3(moveVector, 0.0f, 0.0f);
         }
-        if (Input.GetKey(KeyCode.D) == true)
-        {
-            transform.position -= new Vector3(0.0f, 0.0f, moveVector);
-        }
-        if (Input.GetKey(KeyCode.D) == true)
+        if (Input.GetKey(KeyCode.D) == true || Input.GetKey(KeyCode.RightArrow) == true)
         {
             transform.position -= new Vector3(0.0f, 0.0f, moveVector);
         }
