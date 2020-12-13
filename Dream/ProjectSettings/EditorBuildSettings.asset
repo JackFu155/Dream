@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Jack'sScene/Level 1.unity
+    guid: 4a106c78e02aac7479745d0344230bde
+  - enabled: 1
+    path: Assets/Scenes/Jack'sScene/Level 2.unity
+    guid: 37a8f0c5c0c222549a0452b72c7b80c9
+  - enabled: 1
+    path: Assets/Scenes/Jack'sScene/Level 3.unity
+    guid: d0766849ca28cbb4d90887f54fd370f8
+  - enabled: 1
+    path: Assets/Scenes/Jack'sScene/Level 4.unity
+    guid: 0659e589461403f4989fb96a5dcf91ef
+  - enabled: 1
+    path: Assets/Scenes/Jack'sScene/Level 5.unity
+    guid: 042aa1272891cb44fbe68964c9af0ae0
   m_configObjects: {}
