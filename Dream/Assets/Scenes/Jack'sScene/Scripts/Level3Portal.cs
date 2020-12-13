@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class Level2Portal : MonoBehaviour
+public class Level3Portal : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,7 +15,6 @@ public class Level2Portal : MonoBehaviour
     {
         
     }
-
     void OnCollisionStay(Collision col)
     {
         //Check for a match with the specified name on any GameObject that collides with your GameObject
@@ -24,7 +22,7 @@ public class Level2Portal : MonoBehaviour
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level 3", LoadSceneMode.Single);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level3", LoadSceneMode.Single);
         }
     }
 }

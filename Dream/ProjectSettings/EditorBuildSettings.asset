@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: bcaf6aaa751a8cb67bf77364172c5a6d
+  - enabled: 1
     path: Assets/Scenes/Jack'sScene/Level 1.unity
     guid: 4a106c78e02aac7479745d0344230bde
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jack'sScene/Level 5.unity
     guid: 042aa1272891cb44fbe68964c9af0ae0
-  - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
-    guid: bcaf6aaa751a8cb67bf77364172c5a6d
   - enabled: 1
     path: Assets/Scenes/Level3Scene/Level3.unity
     guid: 1c6fdeece16e70b809e134de0513c544
