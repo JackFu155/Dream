@@ -131,8 +131,7 @@ public class Path
     return q;
   } 
   public float footT(Vector3 r){
-      return Vector3.Dot((pathList[index][1]-pathList[index][0]),(r-pathList[index][0]))/(pathDist*pathDist);
-
+      return Mathf.Clamp(Vector3.Dot((pathList[index][1]-pathList[index][0]),(r-pathList[index][0]))/(pathDist*pathDist),0,1); 
   }
 
 }

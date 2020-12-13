@@ -1680,6 +1680,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   manager: {fileID: 1722925194}
+  pos: {x: 0, y: 0, z: 0}
+  ext: {x: 0, y: 0, z: 0}
+  sz: {x: 0, y: 0, z: 0}
+  rBox:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!54 &1484047902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1711,7 +1720,7 @@ GameObject:
   - component: {fileID: 1608139583}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

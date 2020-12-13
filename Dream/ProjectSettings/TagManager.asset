@@ -8,6 +8,8 @@ TagManager:
   - Pillow
   - Target
   - Wall
+  - Button
+  - Box
   layers:
   - Default
   - TransparentFX
