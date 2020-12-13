@@ -54,8 +54,10 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Jump()
     {
+      if(rb.velocity.y==0){
         rb.AddForce(new Vector3(0.0f, jumpVector, 0.0f));
         
+      }
     }
     public void restart(){
       transform.position = startPos;
