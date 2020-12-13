@@ -8,7 +8,10 @@ TagManager:
   - Pillow
   - Target
   - Wall
+<<<<<<< Updated upstream
   - Button
+=======
+>>>>>>> Stashed changes
   - Box
   layers:
   - Default
