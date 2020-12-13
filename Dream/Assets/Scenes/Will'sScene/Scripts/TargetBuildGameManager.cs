@@ -8,10 +8,17 @@ public class TargetBuildGameManager : MonoBehaviour
   public GameObject[] enemies;
   public GameObject player;
   public GameObject PillowPrefab;
+  public List<ShootButton> sBs;
+  public GameObject cylinder;
     // Start is called before the first frame update
     void Start()
     {
         PillowPrefab.GetComponent<PillowShoot>().player = player;
+        sBs = new List<ShootButton>();
+        foreach(GameObject b in buttons){
+          sBs.Add(b.GetComponent<ShootButton>());
+        }
+        
     }
 
     // Update is called once per frame
@@ -27,5 +34,17 @@ public class TargetBuildGameManager : MonoBehaviour
       if(Input.GetKeyDown(KeyCode.Z)){
         Instantiate(PillowPrefab);
       }
+      bool allactive = true;
+      foreach(ShootButton sb in sBs){
+        if(!sb.activate){
+          allactive=false;
+        } 
+      }
+      if(allactive){
+        cylinder.SetActive(true);
+      }
+    }
+    public void nextLevel(){
+      Debug.Log("You Win!");
     }
 }
