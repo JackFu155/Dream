@@ -8175,7 +8175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3af1894660c8b4eb99f3fff4a2e11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveVector: 0.01
+  moveVector: 0.02
   jumpVector: 400
   rb: {fileID: 1386468795}
 --- !u!54 &1386468795
