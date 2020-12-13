@@ -24,7 +24,7 @@ public class Level2Portal : MonoBehaviour
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level 3", LoadSceneMode.Single);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level3", LoadSceneMode.Single);
         }
     }
 }

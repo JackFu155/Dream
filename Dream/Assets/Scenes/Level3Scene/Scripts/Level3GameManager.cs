@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Level3GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -91,6 +91,6 @@ public class Level3GameManager : MonoBehaviour
 
     }
     public void nextLevel(){
-      Debug.Log("You Win!");
+     UnityEngine.SceneManagement.SceneManager.LoadScene("Level Scene",LoadSceneMode.Single); 
     }
 }

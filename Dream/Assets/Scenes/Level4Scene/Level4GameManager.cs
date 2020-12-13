@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Level4GameManager : MonoBehaviour
 {
   public GameObject[] enemies;
@@ -106,6 +106,6 @@ public class Level4GameManager : MonoBehaviour
   }
 
     public void nextLevel(){
-      Debug.Log("You Win!");
+      UnityEngine.SceneManagement.SceneManager.LoadScene("Final Level",LoadSceneMode.Single);
     }
 }
